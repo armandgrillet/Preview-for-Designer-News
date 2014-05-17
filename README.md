@@ -1,0 +1,1 @@
+A simple extension to preview your posts on Designer News.

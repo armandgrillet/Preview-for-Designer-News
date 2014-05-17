@@ -1,0 +1,24 @@
+{
+    "name": "Preview for Designer News",
+    "version": "1.0",
+    "manifest_version": 2,
+    "author": "Armand Grillet",
+    "description": "Display HTML result before posting a new post on DN",
+    "permissions": [
+        "https://news.layervault.com/submit"
+    ],
+    "content_scripts": [
+    {
+        "matches": [
+            "https://news.layervault.com/submit"
+        ],
+        "css": [
+            "css/base.css"
+        ],
+        "js": [
+            "js/lib/marked.min.js",
+            "js/preview.js"
+        ]
+    }
+    ]
+}
