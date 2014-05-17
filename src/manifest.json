@@ -1,9 +1,10 @@
 {
     "name": "Preview for Designer News",
-    "version": "1.0",
+    "version": "1.0.1",
     "manifest_version": 2,
     "author": "Armand Grillet",
     "description": "Display HTML result before posting a new post on DN",
+    "homepage_url": "https://github.com/ArmandGrillet/Preview-for-Designer-News",
     "permissions": [
         "https://news.layervault.com/submit"
     ],
