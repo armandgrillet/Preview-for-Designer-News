@@ -1,5 +1,3 @@
-A simple extension to preview your posts on Designer News.
-
 ## Installation
 The extension is available [on the Chrome Web Store](https://chrome.google.com/webstore/detail/preview-for-designer-news/odgbkpnicjkiefchhoeconpjbpcnobeb).
 
