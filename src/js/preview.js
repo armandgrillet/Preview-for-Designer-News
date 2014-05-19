@@ -5,40 +5,37 @@
 */
 
 /* HTML shortcuts. */
-var storyTextarea;
+var commentTextarea;
 var innerPage;
 
 /* Functions variables. */
 var previewTitle;
-var previewContent;
+var previewComment;
 
-/*
-* Code.
-*/
-storyTextarea = document.getElementById("StoryComment");
-innerPage = document.getElementsByClassName("InnerPage")[0];
+function launchPreview (stylePreviewTitle, stylePreviewComment) { // The observation of the textarea begins.
+	/* Manage the title. */
+	previewTitle = document.createElement("div");
+	previewTitle.innerHTML = "<h1>Preview:</h1>";
+	if (stylePreviewTitle != undefined)
+		previewTitle.setAttribute("style", stylePreviewTitle);
+	innerPage.appendChild(previewTitle);
 
-/* Title */
-previewTitle = document.createElement("div");
-previewTitle.innerHTML = "<h1>Preview:</h1>";
-previewTitle.style["padding-top"] = "40px";
-innerPage.appendChild(previewTitle);
+	/* Manage the preview. */
+	previewComment = document.createElement("div");
+	previewComment.className = "StoryBody";
+	if (stylePreviewComment != undefined)
+		previewComment.setAttribute("style", stylePreviewComment);
+	innerPage.appendChild(previewComment);
 
-/* Post */
-previewContent = document.createElement("div");
-previewContent.className = "StoryBody";
-innerPage.appendChild(previewContent);
-previewContent.setAttribute('style', "font: 400 14px/24px \"Whitney SSm A\",\"Whitney SSm B\",\"Georgia\",\"Times New Roman\",Serif;");
+	/* Ready for the conversion. */
+	if (previewComment.innerHTML != "")
+		contentChanged();
+	commentTextarea.onkeyup = contentChanged;
+	commentTextarea.onpaste = contentChanged;
+}
 
-/* Translation */
-if (previewContent.innerHTML != "")
-	contentChanged();
-storyTextarea.onkeyup = contentChanged;
-storyTextarea.onpaste = contentChanged;
-
-/* Displays the post with the textarea is updated. */
-function contentChanged () { 
-	marked(storyTextarea.value, function (err, content) {  
-    	previewContent.innerHTML = content; 
+function contentChanged () { // Whenever something is done with the textarea, this function updates the preview.
+	marked(commentTextarea.value, function (err, content) {  
+    	previewComment.innerHTML = content; 
     });
 }
