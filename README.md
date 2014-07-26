@@ -1,7 +1,7 @@
 # Preview for Designer News
 ## Design
 <p align="center">
-<img src="https://s3-us-west-1.amazonaws.com/armand.gr/static/work/Preview+for+Designer+News/Chrome+Web+Store.png">
+<img src="http://i.imgur.com/d8m1YiS.png">
 </p>
 
 ## Installation
