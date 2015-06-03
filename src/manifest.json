@@ -1,19 +1,19 @@
 {
     "name": "Preview for Designer News",
-    "version": "1.1",
+    "version": "1.2",
     "manifest_version": 2,
     "author": "Armand Grillet",
     "description": "An extension to see what will look like your new comment on DN",
     "homepage_url": "https://github.com/ArmandGrillet/Preview-for-Designer-News",
     "permissions": [
-        "https://news.layervault.com/"
+        "https://www.designernews.co/"
     ],
     "content_scripts": [
         {
             "matches": [
-                "https://news.layervault.com/submit",
-                "https://news.layervault.com/stories/*",
-                "https://news.layervault.com/comments/*"
+                "https://www.designernews.co/submit",
+                "https://www.designernews.co/stories/*",
+                "https://www.designernews.co/comments/*"
             ],
             "js": [
                 "js/lib/marked.min.js",
@@ -22,7 +22,7 @@
         },
         {
             "matches": [
-                "https://news.layervault.com/comments/*"
+                "https://www.designernews.co/comments/*"
             ],
             "js": [
                 "js/preview-comment.js"
@@ -30,7 +30,7 @@
         },
         {
             "matches": [
-                "https://news.layervault.com/stories/*"
+                "https://www.designernews.co/stories/*"
             ],
             "js": [
                 "js/preview-story.js"
@@ -38,7 +38,7 @@
         },
         {
             "matches": [
-                "https://news.layervault.com/submit"
+                "https://www.designernews.co/submit"
             ],
             "js": [
                 "js/preview-submit.js"
