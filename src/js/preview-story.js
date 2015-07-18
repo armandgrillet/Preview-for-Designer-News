@@ -1,5 +1,5 @@
 /* Set the HTML shortcuts. */
 commentTextarea = document.getElementById("comment_body");
-innerPage = document.getElementById("new_comment");
+innerPage = document.getElementsByClassName('story-comment-form')[0];
 
 launchPreview();
